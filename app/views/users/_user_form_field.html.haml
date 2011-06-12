@@ -1,0 +1,20 @@
+-if form_fields.include?(:login)
+  %br
+  =f.label "login"
+  =f.text_field :login
+-if form_fields.include?(:nick)
+  %br
+  =f.label "nick"
+  =f.text_field :nick
+-if form_fields.include?(:fullname)
+  %br
+  =f.label "teljes név"
+  =f.text_field :fullname
+-if form_fields.include?(:email)
+  %br
+  =f.label "email"
+  =f.text_field :email
+-if form_fields.include?(:password)
+  %br
+  =f.label "password"
+  =f.text_field :password

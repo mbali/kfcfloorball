@@ -1,0 +1,36 @@
+%table
+  %tr
+    %th
+      ID
+    %th
+      login
+    %th
+      email
+    %th
+      Pontszám
+    %th
+      Meccsek
+    %th
+      Átlag pontszám
+    %th
+      Action
+  -@users.each do |u|
+    %tr
+      %td
+        =link_to u.id, user_path(u)
+      %td
+        =u.login
+      %td
+        =u.email
+      %td
+        =u.score
+      %td
+        =u.match_count
+      %td
+        =u.avg_score
+      %td
+        =link_to "Szerkeszt", edit_user_path(u)
+        \-
+        =button_to("Töröl", user_path(u), :method => :delete, :confirm => "Biztos törlöd?")
+=link_to "Új felhasználó", new_user_path
+

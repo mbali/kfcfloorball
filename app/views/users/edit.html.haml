@@ -1,0 +1,8 @@
+-@user.errors.each do |k,err|
+  %p
+    =err
+-form_for(@user, :html => {:method => :put, :id =>"user_edit_form"}) do |f|
+  =render :partial => "user_form_field", :locals => {:f => f, :form_fields => [:nick,:fullname,:email,:password]}
+  %br
+  =submit_tag "Ment"
+=link_to "Vissza a user listára", users_path
